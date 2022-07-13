@@ -96,11 +96,11 @@ void Window::OnButtonClicked(wxCommandEvent &evt)
 	{
 		//Count Neighbors
 		int neighborCount = 0;
-		for(int i = -2; i < 2; i++)
+		for(int i = -1; i < 2; i++)
 		{
-			for (int j = -2; j < 2; j++)
+			for (int j = -1; j < 2; j++)
 			{
-				if(x+ i >= 0 && x+ i < minefieldX && y + j >= 0 && y + j < minefieldY)
+				if(x + i >= 0 && x + i < minefieldX && y + j >= 0 && y + j < minefieldY)
 				{
 					if(mines[(y + j) * minefieldX + (x+ i)] == -1)
 					{
